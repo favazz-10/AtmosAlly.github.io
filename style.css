@@ -15,6 +15,7 @@ body {
   background: url(bg4.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   overflow: hidden;
 }
 
