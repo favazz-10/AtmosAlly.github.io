@@ -6,7 +6,7 @@ const error404 = document.querySelector(".not-found")
 const cityHide=document.querySelector(".city-hide")
 
 
-search.addEventListener('click', () => { 
+const searchWeather= () => { 
 
     const APIKey = 'f0ad76079ff8a0b6a0c1a1f4e029f504'
     const city = document.querySelector(".search-box input").value
@@ -129,4 +129,13 @@ search.addEventListener('click', () => {
         
         
     })
-})
+}
+
+search.addEventListener('click', searchWeather);
+
+
+document.querySelector(".search-box input").addEventListener('keyup', (event) => {
+  if (event.key === 'Enter') {
+    searchWeather(); 
+  }
+});
